@@ -1,4 +1,5 @@
 // Scatterplot construction
+
 var svgWidth = 960;
 var svgHeight = 500;
 var margin = {
@@ -92,7 +93,7 @@ d3.csv("data.csv").then(function(healthGraph) {
         .on("mouseover", function(data, index) {
             toolTip.show(data, this);
             d3.select(this).style("stroke", "#323232")
-                // .style("stroke-width", "10")
+
         })
         .on("mouseout", function(data, index) {
             toolTip.hide(data, this)
