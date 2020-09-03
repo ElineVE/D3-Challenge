@@ -80,10 +80,6 @@ d3.csv("data.csv").then(function(healthGraph) {
         .attr("cx", d => xLinearScale(d.poverty))
         .attr("cy", d => yLinearScale(d.healthcare))
         .attr("r", 15)
-        //   .attr("stroke-width", "1")
-        //   .attr("stroke", "black")
-        //   .attr("fill", "lightblue")
-        //   .attr("opacity", "1");
 
     // var circlesGroup = scatterPlot.selectAll("circle").data(healthGraph).enter();
     circlesGroup.append("text")
