@@ -112,6 +112,7 @@ d3.csv("data.csv").then(function(healthGraph) {
         .html(function(d) {
             return (`<strong>${d.state}</strong><br>% in Poverty: ${d.poverty}<br>% Lacks Healthcare: ${d.healthcare}`);
         });
+
     // Create tooltip in the chart
 
     scatterPlot.call(toolTip);
