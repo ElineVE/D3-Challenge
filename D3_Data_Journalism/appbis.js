@@ -48,7 +48,8 @@ d3.csv("data.csv").then(function(healthGraph) {
     var xAxis = d3.axisBottom(xLinearScale);
     var yAxis = d3.axisLeft(yLinearScale);
 
-    // Append Axes to the chart
+    // Append Axes to chart
+
     scatterPlot.append("g")
         .attr("transform", `translate(0, ${height})`)
         .call(xAxis);
@@ -57,6 +58,7 @@ d3.csv("data.csv").then(function(healthGraph) {
         .call(yAxis);
 
     // Create axes labels
+
     scatterPlot.append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 0 - margin.left + 40)
@@ -71,6 +73,7 @@ d3.csv("data.csv").then(function(healthGraph) {
         .text("% in Poverty");
 
     // Create Circles
+
     var circlesGroup = scatterPlot.selectAll("circle").data(healthGraph).enter()
     circlesGroup.append("circle")
         .attr("class", "stateCircle")
