@@ -81,7 +81,6 @@ d3.csv("data.csv").then(function(healthGraph) {
         .attr("cy", d => yLinearScale(d.healthcare))
         .attr("r", 15)
 
-    // var circlesGroup = scatterPlot.selectAll("circle").data(healthGraph).enter();
     circlesGroup.append("text")
         .text(function(d) {
             return d.abbr;
@@ -104,8 +103,6 @@ d3.csv("data.csv").then(function(healthGraph) {
         .call(xAxis);
     scatterPlot.append("g")
         .call(yAxis);
-
-    // var circleLabels = scatterPlot.selectAll(null).data(healthGraph).enter().append("text");
 
     // circleLabels
     //     .attr("x", function(d) {
