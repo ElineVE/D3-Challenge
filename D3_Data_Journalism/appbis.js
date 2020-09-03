@@ -104,20 +104,7 @@ d3.csv("data.csv").then(function(healthGraph) {
     scatterPlot.append("g")
         .call(yAxis);
 
-    // circleLabels
-    //     .attr("x", function(d) {
-    //         return xLinearScale(d.poverty);
-    //     })
-    //     .attr("y", function(d) {
-    //         return yLinearScale(d.healthcare);
-    //     })
-    //     .text(function(d) {
-    //         return d.abbr;
-    //     })
-    //     .attr("class", "stateText");
-
-
-    // Initialize tool tip
+    // Initialize tooltip
 
     var toolTip = d3.tip()
         .attr("class", "d3-tip")
@@ -129,7 +116,7 @@ d3.csv("data.csv").then(function(healthGraph) {
 
     scatterPlot.call(toolTip);
 
-    // Create event listeners to display and hide the tooltip
+    // Create event listeners to display and hide tooltip
 
     circlesGroup.on("mouseover", function(data) {
             toolTip.show(data);
